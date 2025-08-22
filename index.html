@@ -55,8 +55,8 @@
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a href="#home" class="nav-link active text-white">Home</a></li>
           <li class="nav-item"><a href="#about" class="nav-link text-white">About</a></li>
+          <li class="nav-item"><a href="#research" class="nav-link text-white">Our Vision</a></li>
           <li class="nav-item"><a href="#ingredients" class="nav-link text-white">Herbal Drug</a></li>
-          <li class="nav-item"><a href="#research" class="nav-link text-white">Our Research</a></li>
           <li class="nav-item"><a href="#faqs" class="nav-link text-white">FAQs</a></li>
         </ul>
       </div>
@@ -98,13 +98,14 @@
 </section>
 
 <!-- About Section -->
+<!-- About Section -->
 <section id="about" class="about-section py-5">
   <div class="container">
     <div class="row align-items-center">
       
       <!-- Left Image -->
       <div class="col-md-6 mb-4 mb-md-0 text-center">
-        <img src="./assets/Our Vision.jpg" class="img-fluid rounded shadow-lg" alt="Herbal Project Image">
+        <img src="./assets/About Us.jpg" class="img-fluid rounded shadow-lg" alt="About Us Image">
       </div>
 
       <!-- Right Text -->
@@ -124,12 +125,17 @@
         </p>
       </div>
     </div>
+  </div>
+</section>
 
-    <!-- Vision Row -->
-    <div class="row align-items-center mt-5 flex-md-row-reverse">
+<!-- Our Vision Section -->
+<section id="research" class="about-section py-5">
+  <div class="container">
+    <div class="row align-items-center flex-md-row-reverse">
+      
       <!-- Right Image -->
       <div class="col-md-6 mb-4 mb-md-0 text-center">
-        <img src="./assets/About Us.jpg" class="img-fluid rounded shadow-lg" alt="Our Vision Image">
+        <img src="./assets/Our Vision.jpg" class="img-fluid rounded shadow-lg" alt="Our Vision Image">
       </div>
 
       <!-- Left Text -->
@@ -147,6 +153,7 @@
   </div>
 </section>
 
+
 <section id="ingredients" class="ingredients-section py-5">
   <div class="container">
     <div class="row text-center mb-5">
@@ -159,9 +166,9 @@
       <!-- Cards dynamically rendered here -->
     </div>
 
-    <div class="text-center mt-4">
-      <button id="seeMoreBtn" class="btn btn-success me-2">See More</button>
-      <button id="seeAllBtn" class="btn btn-dark">See All</button>
+    <div class="text-center mt-4" >
+      <button id="seeMoreBtn" class="btn btn-success me-2" style="background-color: #2E7D32;">See More</button>
+      <button id="seeAllBtn" class="btn btn-success me-2" style="background-color: #2E7D32;">See All</button>
     </div>
   </div>
 </section>
@@ -552,8 +559,8 @@ container.innerHTML += `
         <ul style="list-style:none; padding:0; margin:0;">
           <li><a href="#home" style="color:#fff; text-decoration:none;">Home</a></li>
           <li><a href="#about" style="color:#fff; text-decoration:none;">About</a></li>
+          <li><a href="#research" style="color:#fff; text-decoration:none;">Our Vision</a></li>
           <li><a href="#ingredients" style="color:#fff; text-decoration:none;">Herbal Drug</a></li>
-          <li><a href="#research" style="color:#fff; text-decoration:none;">Our Research</a></li>
           <li><a href="#faqs" style="color:#fff; text-decoration:none;">FAQs</a></li>
         </ul>
       </div>
@@ -564,8 +571,14 @@ container.innerHTML += `
         <p style="margin:0; font-size:15px;">
           <b>LOCATION:</b>  DOW University Karachi, Pakistan
         </p>
-        <p style="margin:0; font-size:15px;"><b>EMAIL:</b>  info@herbalhealth.com</p>
-        <p style="margin:0; font-size:15px;"><b>PHONE:</b>  +92 300 1234567</p>
+ <p style="margin:0; font-size:15px;">
+  <b>EMAIL:</b> 
+  <a href="mailto:aeiosa38@gmail.com" style="color:#aabeab; text-decoration:none;">
+    aeiosa38@gmail.com
+  </a>
+</p>
+
+        <p style="margin:0; font-size:15px;"><b>PHONE:</b>  +92 333 7818684</p>
         <div style="margin-top:12px;">
           <a href="#" style="color:#fff; margin-right:10px; font-size:18px;"><i class="bi bi-facebook"></i></a>
           <a href="#" style="color:#fff; margin-right:10px; font-size:18px;"><i class="bi bi-twitter"></i></a>

@@ -1,0 +1,300 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+      font-family: 'Poppins', sans-serif !important;
+  padding-top: 100px; /* equal to navbar height */
+}
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+
+  p, li, a, button {
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  .navbar-nav .nav-link {
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+.nav-pills li a{
+  color: #fff !important;;
+}
+.custom-header {
+  background-color: #69cd83;
+}
+.nav-item a{
+  padding: 9px 16px ;
+  margin-left: 12px;
+  border-radius: 8px;
+  font-size: 17px;
+
+
+}
+.nav-link.active {
+  background-color: darkgreen !important;
+  color: #fff !important;
+  border-radius: 8px;
+}
+
+
+/* Hero Section */
+.hero-banner {
+  position: relative;
+  height: 80vh;  /* Adjust height */
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+/* Overlay for dark effect */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(98, 151, 121, 0.45); /* Dark transparent layer */
+  z-index: 1;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 20px;
+}
+
+/* Desktop (default) */
+.hero-text h1 {
+  font-size: 3rem;   /* Large title */
+  font-weight: 700;
+}
+.hero-text p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Responsive: Tablets & below */
+@media (max-width: 991px) {
+  .hero-text h1 {
+    font-size: 2.2rem !important;
+  }
+  .hero-text p {
+    font-size: 1.1rem !important;
+  }
+}
+/* Responsive: Mobile */
+@media (max-width: 576px) {
+  .hero-text h1 {
+    font-size: 1.6rem !important;
+    line-height: 1.4;
+  }
+  .hero-text p {
+    font-size: 1rem !important;
+  }
+  .hero-buttons {
+    flex-direction: row;   /* keep side by side */
+    gap: 0.75rem;
+    justify-content: center;
+  }
+  .hero-buttons button {
+    flex: 1;                     /* both take equal width */
+    min-width: 140px;            /* prevent being too small */
+    font-size: 0.9rem;           /* slightly smaller text */
+    white-space: nowrap;         /* keep text on one line */
+    padding: 10px 12px;
+  }
+}
+
+
+
+/* Keyframes */
+@keyframes zoomEffect {
+  0% {
+    background-size: 100%;
+  }
+  100% {
+    background-size: 110%;
+  }
+}
+
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.hero-buttons button {
+  border: none;
+  outline: 0;
+  padding: 12px 30px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* App Store Button */
+.btn-download {
+  background-color: #2E7D32;
+  color: white;
+}
+
+.btn-download:hover {
+  background-color: #1b5e20;
+  
+}
+
+/* Play Store Button */
+.btn-playstore {
+  background-color: #2E7D32;
+  color: white;
+}
+
+.btn-playstore:hover {
+  background-color: #1b5e20;
+}
+
+/* Make hamburger white */
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' 
+  xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255,255,255,1%29' 
+  stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' 
+  d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Card image consistency */
+.card-img-top {
+  height: 200px;       /* Fixed height for all images */
+  object-fit: cover;   /* Crops nicely without stretching */
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+/* Card styling */
+.card {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+/* Custom themed buttons */
+.btn-see-more, .btn-see-all {
+  background-color: #2E7D32;   /* herbal green */
+  color: #fff;
+  font-weight: bold;
+  border-radius: 6px;
+  padding: 10px 24px;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn-see-more:hover, .btn-see-all:hover {
+  background-color: #2E7D32;   /* darker green hover */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(26, 154, 45, 0.15);
+}
+/* Custom green button for View Details */
+.card .btn-view {
+  background-color: #2E7D32 !important;   /* herbal green */
+  color: #fff !important;                 /* white text */
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 8px 18px;
+  border: none !important;
+  transition: all 0.3s ease;
+  text-align: center;
+  display: inline-block;
+}
+
+.card .btn-view:hover {
+  background-color: #1b5e20 !important;   /* darker green */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* FAQ Section */
+.faq-section {
+  background: #277e27;
+}
+
+/* Accordion button (default state) */
+.accordion-button {
+  background-color: #2E7D32;  /* Herbal green */
+  color: #fff !important;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  box-shadow: none;
+}
+
+/* Accordion button when open (active) */
+.accordion-button:not(.collapsed) {
+  background-color: #1b5e20 !important;  /* Dark herbal green */
+  color: #fff !important;
+  box-shadow: none;
+}
+
+/* Remove Bootstrap default blue highlight */
+.accordion-button:focus {
+  border-color: #1b5e20 !important;
+  box-shadow: 0 0 0 0.2rem rgba(46, 125, 50, 0.25) !important; /* subtle green glow */
+}
+
+/* Accordion body */
+.accordion-body {
+  background: #fff;
+  border-left: 3px solid #2E7D32;
+  padding: 15px 20px;
+  font-size: 16px;
+  color: #333;
+  border-radius: 0 0 6px 6px;
+  line-height: 1.6;
+}

@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medical Website</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<!-- <section class="custom-header">
+  <div class="container">
+  <header class="d-flex flex-wrap justify-content-center py-1 ">
+    <a href="/" class="d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+      <img src="./assets/logo-removebg-preview2.png" width="35%" alt="">      
+    </a>
+    <ul class="nav nav-pills" style="align-items: center;">
+      <li class="nav-item">
+        <a href="#" class="nav-link active" aria-current="page" style="background: darkgreen;">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link">About</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link">Herbal Ingredients</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link">Our Research</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link">FAQs</a>
+      </li>
+    </ul>
+  </header>
+</div>
+  
+</section> -->
+<!-- Navbar -->
+<section class="custom-header fixed-top">   <!-- fixed-top makes it visible on scroll -->
+  <div class="container">
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="#">
+        <img src="./assets/logo-removebg-preview2.png" alt="Logo" style="width: 35%;">
+      </a>
+
+      <!-- Hamburger -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Menu -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a href="#home" class="nav-link active text-white">Home</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link text-white">About</a></li>
+          <li class="nav-item"><a href="#ingredients" class="nav-link text-white">Herbal Drug</a></li>
+          <li class="nav-item"><a href="#research" class="nav-link text-white">Our Research</a></li>
+          <li class="nav-item"><a href="#faqs" class="nav-link text-white">FAQs</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</section>
+
+<script>
+  // Select all nav links
+  const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      // Remove 'active' class from all links
+      navLinks.forEach(l => l.classList.remove('active'));
+
+      // Add 'active' class to the clicked one
+      this.classList.add('active');
+    });
+  });
+</script>
+<section id="home" class="hero-banner">
+  <video autoplay muted loop playsinline class="hero-video">
+    <source src="assets/herobanner-video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Overlay -->
+  <div class="hero-overlay"></div>
+
+  <div class="hero-text">
+    <h1>Your Herbal Guide for Health & Wellness</h1>
+    <p>Discover natural remedies, explore herbal knowledge, and live a healthier life.</p>
+    <div class="hero-buttons">
+      <button class="btn-playstore">Get it on Play Store</button>
+      <button class="btn-download">Get it on App Store</button>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about-section py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- Left Image -->
+      <div class="col-md-6 mb-4 mb-md-0 text-center">
+        <img src="./assets/Our Vision.jpg" class="img-fluid rounded shadow-lg" alt="Herbal Project Image">
+      </div>
+
+      <!-- Right Text -->
+      <div class="col-md-6">
+        <h1 class="fw-bold mb-3" style="font-size:38px; color:#2E7D32;">About Us</h1>
+        <p class="lead">
+          We are undergraduates of the Pharm D program at Dow University of Health Sciences (DCOP, DUHS) 
+          aiming to gain the best knowledge and share it with the ambition of improving health outcomes. 
+          After extensive study of herbal ingredients and their awareness among the population, we observed 
+          increased interest but limited knowledge. This inspired us to initiate this research project with 
+          the intention of making herbal knowledge accessible to everyone.
+        </p>
+        <p class="lead">
+          We evaluated the need for a digital tool that can offer precise, easily comprehensible, and 
+          accessible information about herbal ingredients. This project envisions bringing trustworthy 
+          herbal knowledge to your fingertips.
+        </p>
+      </div>
+    </div>
+
+    <!-- Vision Row -->
+    <div class="row align-items-center mt-5 flex-md-row-reverse">
+      <!-- Right Image -->
+      <div class="col-md-6 mb-4 mb-md-0 text-center">
+        <img src="./assets/About Us.jpg" class="img-fluid rounded shadow-lg" alt="Our Vision Image">
+      </div>
+
+      <!-- Left Text -->
+      <div class="col-md-6">
+        <h2 class="fw-bold mb-3" style="font-size:38px; color:#2E7D32;">Our Vision</h2>
+        <p class="lead">
+          This website aims to encourage the safe and informed use of herbal ingredients using 
+          pharmacovigilance principles. It bridges the gap between traditional knowledge and modern science 
+          by acting as a comprehensive resource. Our platform provides detailed, evidence-based information 
+          including indications, contraindications, and potential side effects of commonly used herbal 
+          ingredients — all made easily accessible to the public.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ingredients" class="ingredients-section py-5">
+  <div class="container">
+    <div class="row text-center mb-5">
+      <div class="col-md-12">
+        <h2 class="fw-bold"  style="font-size:38px; color:#2E7D32;">Herbal Drug Dictionary</h2>
+      </div>
+    </div>
+
+    <div class="row" id="ingredients-container">
+      <!-- Cards dynamically rendered here -->
+    </div>
+
+    <div class="text-center mt-4">
+      <button id="seeMoreBtn" class="btn btn-success me-2">See More</button>
+      <button id="seeAllBtn" class="btn btn-dark">See All</button>
+    </div>
+  </div>
+</section>
+
+<!-- Modal Template -->
+<div class="modal fade" id="ingredientModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ingredientModalLabel"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="ingredientModalBody">
+        <!-- Dynamic details here -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const ingredients = [
+    {
+      name: "Almond (Badam)",
+      img: "assets/almond.jpg",
+      uses: "Improves brain function, relieves constipation, boosts energy.",
+      remedy: "Eaten raw, soaked overnight or in milk desserts.",
+      dose: "5–7 soaked almonds daily.",
+      side: "Excess may cause digestive upset."
+    },
+    {
+      name: "Amla (Indian Gooseberry)",
+      img: "assets/amla.jpg",
+      uses: "Boosts immunity, aids digestion, promotes hair growth.",
+      remedy: "Used in juices, powders, hair oils.",
+      dose: "10–20 ml juice daily or 1–2 tsp powder.",
+      side: "Excess may cause acidity."
+    },
+    {
+      name: "Anar Dana (Pomegranate Seeds)",
+      img: "assets/anardana.jpg",
+      uses: "Improves digestion, relieves acidity.",
+      remedy: "Used in chutneys, salads, spice mixes.",
+      dose: "5–10 grams daily.",
+      side: "Overuse may cause constipation."
+    },
+    {
+      name: "Alu Bukhara (Plum)",
+      img: "assets/plum.jpg",
+      uses: "Relieves constipation, cools body.",
+      remedy: "Eaten fresh or dried (soaked in water).",
+      dose: "2–3 daily.",
+      side: "Excess may cause loose motions."
+    },
+    {
+      name: "Cashew (Kaju)",
+      img: "assets/cashew.jpg",
+      uses: "Strengthens bones, boosts energy.",
+      remedy: "Consumed raw, roasted, or in desserts.",
+      dose: "5–6 daily.",
+      side: "Excess may cause weight gain."
+    },
+    {
+      name: "Cinnamon (Darchini)",
+      img: "assets/cinnamon.jpg",
+      uses: "Controls sugar, fights infections.",
+      remedy: "Used in teas, curries, desserts.",
+      dose: "1–2 small sticks daily.",
+      side: "Excess may harm liver."
+    },
+    {
+      name: "Clove (Laung)",
+      img: "assets/clove.jpg",
+      uses: "Relieves toothache, improves digestion.",
+      remedy: "Used in tea, oils, spice blends.",
+      dose: "2–3 cloves daily.",
+      side: "Excess may irritate stomach."
+    },
+    {
+      name: "Fig (Anjeer)",
+      img: "assets/fig.jpg",
+      uses: "Relieves constipation, good for lungs.",
+      remedy: "Soaked overnight, eaten directly.",
+      dose: "2–3 daily.",
+      side: "Excess may cause diarrhea."
+    },
+    {
+      name: "Ginger (Adrak)",
+      img: "assets/ginger.jpg",
+      uses: "Relieves nausea, cold, joint pain.",
+      remedy: "Used in teas, curries, juices.",
+      dose: "2–3 grams fresh ginger daily.",
+      side: "Excess may cause acidity."
+    },
+    {
+      name: "Honey (Shahad)",
+      img: "assets/honey.png",
+      uses: "Boosts energy, soothes throat.",
+      remedy: "Taken with warm water, milk, or lemon.",
+      dose: "1–2 tsp daily.",
+      side: "Not for infants under 1 year."
+    },
+    {
+      name: "Kalonji (Black Seed)",
+      img: "assets/kalonji.jpg",
+      uses: "Boosts immunity, relieves allergies.",
+      remedy: "Used in breads, teas, oils.",
+      dose: "1 tsp daily.",
+      side: "Excess may cause low BP."
+    },
+    {
+      name: "Kharbooza Seeds",
+      img: "assets/melon.jpg",
+      uses: "Strengthens brain, improves urine flow.",
+      remedy: "Eaten raw or in sweets.",
+      dose: "1–2 tsp daily.",
+      side: "No major side effects."
+    },
+    {
+      name: "Lemon (Nimbu)",
+      img: "assets/lemon.jpg",
+      uses: "Improves immunity, aids digestion.",
+      remedy: "Used in juices, teas, salads.",
+      dose: "1 lemon daily.",
+      side: "Excess may cause tooth erosion."
+    },
+    {
+      name: "Licorice (Mulethi)",
+      img: "assets/licorice.jpg",
+      uses: "Soothes sore throat, relieves cough.",
+      remedy: "Chewed raw or in tea.",
+      dose: "1–2 grams daily.",
+      side: "Excess may raise BP."
+    },
+    {
+      name: "Mehndi (Henna)",
+      img: "assets/henna.jpg",
+      uses: "Hair coloring, treats dandruff, heals wounds.",
+      remedy: "Applied as paste on hair/skin.",
+      dose: "Topical use only.",
+      side: "May cause skin allergy in sensitive people."
+    },
+    {
+      name: "Methi (Fenugreek)",
+      img: "assets/methi.jpg",
+      uses: "Helps diabetes, improves digestion.",
+      remedy: "Used in curries, teas, sprouted.",
+      dose: "1 tsp seeds daily.",
+      side: "Excess may cause loose motions."
+    },
+    {
+      name: "Neem",
+      img: "assets/neem.jpg",
+      uses: "Treats skin issues, infections.",
+      remedy: "Used in soaps, oils, decoctions.",
+      dose: "2–3 leaves daily (or paste).",
+      side: "Excess may harm liver/kidneys."
+    },
+    {
+      name: "Ritha (Soapnut)",
+      img: "assets/ritha.jpg",
+      uses: "Natural shampoo, dandruff control.",
+      remedy: "Boiled and applied to hair.",
+      dose: "Topical use only.",
+      side: "Can irritate eyes."
+    },
+    {
+      name: "Sada Bahar (Periwinkle)",
+      img: "assets/periwinkle.jpg",
+      uses: "Traditionally for diabetes, wounds.",
+      remedy: "Decoctions or extracts (under medical advice).",
+      dose: "Not recommended without doctor.",
+      side: "Can be toxic in excess."
+    },
+    {
+      name: "Senna (Sana Makki)",
+      img: "assets/senna.jpg",
+      uses: "Relieves constipation.",
+      remedy: "Used as tea or tablets.",
+      dose: "1–2 grams leaves daily.",
+      side: "Overuse causes cramping, diarrhea."
+    },
+    {
+      name: "Tukhme Balanga (Basil Seeds)",
+      img: "assets/basil.jpg",
+      uses: "Helps in heatstroke, constipation.",
+      remedy: "Soaked in water, added to drinks.",
+      dose: "1 tsp seeds daily.",
+      side: "Safe in moderation."
+    }
+  ];
+
+  let visibleCount = 3;
+  const container = document.getElementById("ingredients-container");
+
+  function renderIngredients(limit) {
+    container.innerHTML = "";
+    ingredients.slice(0, limit).forEach((item, index) => {
+container.innerHTML += `
+  <div class="col-lg-4 col-md-6 mb-4 d-flex">
+    <div class="card shadow-sm h-100 flex-fill">
+      <img src="${item.img}" class="card-img-top" alt="${item.name}">
+      <div class="card-body d-flex flex-column">
+        <h5 class="card-title">${item.name}</h5>
+        <p class="card-text"><strong>Uses:</strong> ${item.uses}</p>
+<button 
+  class="mt-auto" 
+  style="background-color:#2E7D32; color:#fff; font-weight:600; border:none; border-radius:6px; padding:8px 18px; transition:all 0.3s ease;" 
+  data-bs-toggle="modal" 
+  data-bs-target="#ingredientModal"
+  onclick="showDetails(${index})">
+  View Details
+</button>
+
+
+
+      </div>
+    </div>
+  </div>
+`;
+
+    });
+  }
+
+  function showDetails(index) {
+    const item = ingredients[index];
+    document.getElementById("ingredientModalLabel").innerText = item.name;
+    document.getElementById("ingredientModalBody").innerHTML = `
+      <img src="${item.img}" class="img-fluid mb-3" alt="${item.name}">
+      <p><strong>Uses:</strong> ${item.uses}</p>
+      <p><strong>Remedy:</strong> ${item.remedy}</p>
+      <p><strong>Dose:</strong> ${item.dose}</p>
+      <p><strong>Side Effects:</strong> ${item.side}</p>
+    `;
+  }
+
+  document.getElementById("seeMoreBtn").addEventListener("click", () => {
+    visibleCount += 3;
+    if (visibleCount > ingredients.length) visibleCount = ingredients.length;
+    renderIngredients(visibleCount);
+  });
+
+  document.getElementById("seeAllBtn").addEventListener("click", () => {
+    visibleCount = ingredients.length;
+    renderIngredients(visibleCount);
+  });
+
+  // Initial render
+  renderIngredients(visibleCount);
+</script>
+<!-- FAQ Section -->
+<section id="faqs" class="faq-section py-5" style="background:#f9fdf9;">
+  <div class="container">
+    <div class="row text-center mb-5">
+      <div class="col-md-12">
+        <h2 class="fw-bold" style="font-size:38px; color:#2E7D32;">Frequently Asked Questions</h2>
+        <p class="text-muted" style="font-size:16px;">Find answers to the most common questions about herbal remedies.</p>
+      </div>
+    </div>
+
+    <div class="accordion" id="faqAccordion" style="border-radius:10px;">
+      
+      <!-- Q1 -->
+      <div class="accordion-item shadow-sm mb-3" style="border:1px solid #e0e0e0; border-radius:8px; overflow:hidden;">
+        <h2 class="accordion-header" id="faq1">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1"
+            style="background:#2E7D32; color:#fff; font-weight:600; font-size:17px;">
+            1. What are nutraceuticals?
+          </button>
+        </h2>
+        <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body" style="background:#ffffff; padding:18px; font-size:16px; color:#333; line-height:1.6;">
+            Nutraceuticals are food- or plant-based products that provide health benefits beyond basic nutrition. They can help in prevention and support overall well-being.
+          </div>
+        </div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="accordion-item shadow-sm mb-3" style="border:1px solid #e0e0e0; border-radius:8px; overflow:hidden;">
+        <h2 class="accordion-header" id="faq2">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2"
+            style="background:#2E7D32; color:#fff; font-weight:600; font-size:17px;">
+            2. Are herbal products safe to use?
+          </button>
+        </h2>
+        <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body" style="background:#ffffff; padding:18px; font-size:16px; color:#333; line-height:1.6;">
+            Most are safe when used properly, but they can still cause side effects or interact with medicines. Always check reliable information and use the right dose.
+          </div>
+        </div>
+      </div>
+
+      <!-- Q3 -->
+      <div class="accordion-item shadow-sm mb-3" style="border:1px solid #e0e0e0; border-radius:8px; overflow:hidden;">
+        <h2 class="accordion-header" id="faq3">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3"
+            style="background:#2E7D32; color:#fff; font-weight:600; font-size:17px;">
+            3. Can I take herbal products with my prescribed medicines?
+          </button>
+        </h2>
+        <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body" style="background:#ffffff; padding:18px; font-size:16px; color:#333; line-height:1.6;">
+            Some herbs may interact with medicines, either reducing their effect or causing harm. It’s always best to ask your doctor or pharmacist first.
+          </div>
+        </div>
+      </div>
+
+      <!-- Q4 -->
+      <div class="accordion-item shadow-sm mb-3" style="border:1px solid #e0e0e0; border-radius:8px; overflow:hidden;">
+        <h2 class="accordion-header" id="faq4">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4"
+            style="background:#2E7D32; color:#fff; font-weight:600; font-size:17px;">
+            4. Are herbal remedies a replacement for prescribed medicines?
+          </button>
+        </h2>
+        <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body" style="background:#ffffff; padding:18px; font-size:16px; color:#333; line-height:1.6;">
+            No. Herbal products can support health but should not replace prescribed treatment unless advised by a healthcare professional.
+          </div>
+        </div>
+      </div>
+
+      <!-- Q5 -->
+      <div class="accordion-item shadow-sm mb-3" style="border:1px solid #e0e0e0; border-radius:8px; overflow:hidden;">
+        <h2 class="accordion-header" id="faq5">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5"
+            style="background:#2E7D32; color:#fff; font-weight:600; font-size:17px;">
+            5. Can pregnant or breastfeeding women use herbal remedies?
+          </button>
+        </h2>
+        <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body" style="background:#ffffff; padding:18px; font-size:16px; color:#333; line-height:1.6;">
+            Not all herbs are safe during pregnancy or breastfeeding. Some may even be harmful. Always consult a healthcare provider first.
+          </div>
+        </div>
+      </div>
+
+      <!-- Q6 -->
+      <div class="accordion-item shadow-sm mb-3" style="border:1px solid #e0e0e0; border-radius:8px; overflow:hidden;">
+        <h2 class="accordion-header" id="faq6">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6"
+            style="background:#2E7D32; color:#fff; font-weight:600; font-size:17px;">
+            6. Do herbal remedies work immediately?
+          </button>
+        </h2>
+        <div id="collapse6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body" style="background:#ffffff; padding:18px; font-size:16px; color:#333; line-height:1.6;">
+            Unlike strong medicines, herbal remedies usually work slowly and gently. Benefits may take days or weeks to appear.
+          </div>
+        </div>
+      </div>
+
+      <!-- Q7 -->
+      <div class="accordion-item shadow-sm mb-3" style="border:1px solid #e0e0e0; border-radius:8px; overflow:hidden;">
+        <h2 class="accordion-header" id="faq7">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7"
+            style="background:#2E7D32; color:#fff; font-weight:600; font-size:17px;">
+            7. Why should I trust this website?
+          </button>
+        </h2>
+        <div id="collapse7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body" style="background:#ffffff; padding:18px; font-size:16px; color:#333; line-height:1.6;">
+            Our content is based on scientific evidence and presented in simple language. We include both benefits and risks so you can make safe, informed choices.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer style="background:#1b5e20; color:#fff; padding:40px 0; margin-top:50px;">
+  <div class="container">
+    <div class="row">
+
+      <!-- About -->
+      <div class="col-md-4 mb-4">
+        <h5 style="font-weight:700; margin-bottom:15px;">Our Mission</h5>
+        <p style="line-height:1.6; font-size:15px;">
+          We aim to spread safe and evidence-based knowledge about herbal ingredients. 
+          Our platform is designed to guide you towards healthier, natural choices.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-4 mb-4">
+        <h5 style="font-weight:700; margin-bottom:15px;">Quick Links</h5>
+        <ul style="list-style:none; padding:0; margin:0;">
+          <li><a href="#home" style="color:#fff; text-decoration:none;">Home</a></li>
+          <li><a href="#about" style="color:#fff; text-decoration:none;">About</a></li>
+          <li><a href="#ingredients" style="color:#fff; text-decoration:none;">Herbal Drug</a></li>
+          <li><a href="#research" style="color:#fff; text-decoration:none;">Our Research</a></li>
+          <li><a href="#faqs" style="color:#fff; text-decoration:none;">FAQs</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="col-md-4 mb-4">
+        <h5 style="font-weight:700; margin-bottom:15px;">Contact Us</h5>
+        <p style="margin:0; font-size:15px;">
+          <b>LOCATION:</b>  DOW University Karachi, Pakistan
+        </p>
+        <p style="margin:0; font-size:15px;"><b>EMAIL:</b>  info@herbalhealth.com</p>
+        <p style="margin:0; font-size:15px;"><b>PHONE:</b>  +92 300 1234567</p>
+        <div style="margin-top:12px;">
+          <a href="#" style="color:#fff; margin-right:10px; font-size:18px;"><i class="bi bi-facebook"></i></a>
+          <a href="#" style="color:#fff; margin-right:10px; font-size:18px;"><i class="bi bi-twitter"></i></a>
+          <a href="#" style="color:#fff; font-size:18px;"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <hr style="border-color:rgba(255,255,255,0.2);">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p style="margin:0; font-size:14px;">
+          &copy; 2025 PHYTOPEA. All Rights Reserved.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -112,16 +112,11 @@
       <div class="col-md-6">
         <h1 class="fw-bold mb-3" style="font-size:38px; color:#2E7D32;">About Us</h1>
         <p class="lead">
-          We are undergraduates of the Pharm D program at Dow University of Health Sciences (DCOP, DUHS) 
-          aiming to gain the best knowledge and share it with the ambition of improving health outcomes. 
-          After extensive study of herbal ingredients and their awareness among the population, we observed 
-          increased interest but limited knowledge. This inspired us to initiate this research project with 
-          the intention of making herbal knowledge accessible to everyone.
-        </p>
-        <p class="lead">
-          We evaluated the need for a digital tool that can offer precise, easily comprehensible, and 
-          accessible information about herbal ingredients. This project envisions bringing trustworthy 
-          herbal knowledge to your fingertips.
+          This project was developed by 3rd year morning students under the academic supervision of Dr Wajiha Iffat as a part of academic education initiative.
+<b><strong>Scientific and academic supervision</strong></b><br>
+DR WAJIHA IFFAT<br>
+<b><strong>Developed by</strong></b><br>
+ALINA ARIF,AMNA HASHMANI ,EISHA ALI,HUDA SHUJJAT
         </p>
       </div>
     </div>
@@ -142,11 +137,7 @@
       <div class="col-md-6">
         <h2 class="fw-bold mb-3" style="font-size:38px; color:#2E7D32;">Our Vision</h2>
         <p class="lead">
-          This website aims to encourage the safe and informed use of herbal ingredients using 
-          pharmacovigilance principles. It bridges the gap between traditional knowledge and modern science 
-          by acting as a comprehensive resource. Our platform provides detailed, evidence-based information 
-          including indications, contraindications, and potential side effects of commonly used herbal 
-          ingredients — all made easily accessible to the public.
+This website aims to encourage the safe and informed use of herbal ingredients for therapeutic purposes. It bridges the gap between traditional knowledge and modern science by acting as a comprehensive resource. Our platform provides detailed, evidence-based information including indications, contraindications, and potential side effects of commonly used herbal ingredients — all made easily accessible to the public.
         </p>
       </div>
     </div>
@@ -189,176 +180,120 @@
 </div>
 
 <script>
-  const ingredients = [
-    {
-      name: "Almond (Badam)",
-      img: "assets/almond.jpg",
-      uses: "Improves brain function, relieves constipation, boosts energy.",
-      remedy: "Eaten raw, soaked overnight or in milk desserts.",
-      dose: "5–7 soaked almonds daily.",
-      side: "Excess may cause digestive upset."
-    },
-    {
-      name: "Amla (Indian Gooseberry)",
-      img: "assets/amla.jpg",
-      uses: "Boosts immunity, aids digestion, promotes hair growth.",
-      remedy: "Used in juices, powders, hair oils.",
-      dose: "10–20 ml juice daily or 1–2 tsp powder.",
-      side: "Excess may cause acidity."
-    },
-    {
-      name: "Anar Dana (Pomegranate Seeds)",
-      img: "assets/anardana.jpg",
-      uses: "Improves digestion, relieves acidity.",
-      remedy: "Used in chutneys, salads, spice mixes.",
-      dose: "5–10 grams daily.",
-      side: "Overuse may cause constipation."
-    },
-    {
-      name: "Alu Bukhara (Plum)",
-      img: "assets/plum.jpg",
-      uses: "Relieves constipation, cools body.",
-      remedy: "Eaten fresh or dried (soaked in water).",
-      dose: "2–3 daily.",
-      side: "Excess may cause loose motions."
-    },
-    {
-      name: "Cashew (Kaju)",
-      img: "assets/cashew.jpg",
-      uses: "Strengthens bones, boosts energy.",
-      remedy: "Consumed raw, roasted, or in desserts.",
-      dose: "5–6 daily.",
-      side: "Excess may cause weight gain."
-    },
-    {
-      name: "Cinnamon (Darchini)",
-      img: "assets/cinnamon.jpg",
-      uses: "Controls sugar, fights infections.",
-      remedy: "Used in teas, curries, desserts.",
-      dose: "1–2 small sticks daily.",
-      side: "Excess may harm liver."
-    },
-    {
-      name: "Clove (Laung)",
-      img: "assets/clove.jpg",
-      uses: "Relieves toothache, improves digestion.",
-      remedy: "Used in tea, oils, spice blends.",
-      dose: "2–3 cloves daily.",
-      side: "Excess may irritate stomach."
-    },
-    {
-      name: "Fig (Anjeer)",
-      img: "assets/fig.jpg",
-      uses: "Relieves constipation, good for lungs.",
-      remedy: "Soaked overnight, eaten directly.",
-      dose: "2–3 daily.",
-      side: "Excess may cause diarrhea."
-    },
-    {
-      name: "Ginger (Adrak)",
-      img: "assets/ginger.jpg",
-      uses: "Relieves nausea, cold, joint pain.",
-      remedy: "Used in teas, curries, juices.",
-      dose: "2–3 grams fresh ginger daily.",
-      side: "Excess may cause acidity."
-    },
-    {
-      name: "Honey (Shahad)",
-      img: "assets/honey.png",
-      uses: "Boosts energy, soothes throat.",
-      remedy: "Taken with warm water, milk, or lemon.",
-      dose: "1–2 tsp daily.",
-      side: "Not for infants under 1 year."
-    },
-    {
-      name: "Kalonji (Black Seed)",
-      img: "assets/kalonji.jpg",
-      uses: "Boosts immunity, relieves allergies.",
-      remedy: "Used in breads, teas, oils.",
-      dose: "1 tsp daily.",
-      side: "Excess may cause low BP."
-    },
-    {
-      name: "Kharbooza Seeds",
-      img: "assets/melon.jpg",
-      uses: "Strengthens brain, improves urine flow.",
-      remedy: "Eaten raw or in sweets.",
-      dose: "1–2 tsp daily.",
-      side: "No major side effects."
-    },
-    {
-      name: "Lemon (Nimbu)",
-      img: "assets/lemon.jpg",
-      uses: "Improves immunity, aids digestion.",
-      remedy: "Used in juices, teas, salads.",
-      dose: "1 lemon daily.",
-      side: "Excess may cause tooth erosion."
-    },
-    {
-      name: "Licorice (Mulethi)",
-      img: "assets/licorice.jpg",
-      uses: "Soothes sore throat, relieves cough.",
-      remedy: "Chewed raw or in tea.",
-      dose: "1–2 grams daily.",
-      side: "Excess may raise BP."
-    },
-    {
-      name: "Mehndi (Henna)",
-      img: "assets/henna.jpg",
-      uses: "Hair coloring, treats dandruff, heals wounds.",
-      remedy: "Applied as paste on hair/skin.",
-      dose: "Topical use only.",
-      side: "May cause skin allergy in sensitive people."
-    },
-    {
-      name: "Methi (Fenugreek)",
-      img: "assets/methi.jpg",
-      uses: "Helps diabetes, improves digestion.",
-      remedy: "Used in curries, teas, sprouted.",
-      dose: "1 tsp seeds daily.",
-      side: "Excess may cause loose motions."
-    },
-    {
-      name: "Neem",
-      img: "assets/neem.jpg",
-      uses: "Treats skin issues, infections.",
-      remedy: "Used in soaps, oils, decoctions.",
-      dose: "2–3 leaves daily (or paste).",
-      side: "Excess may harm liver/kidneys."
-    },
-    {
-      name: "Ritha (Soapnut)",
-      img: "assets/ritha.jpg",
-      uses: "Natural shampoo, dandruff control.",
-      remedy: "Boiled and applied to hair.",
-      dose: "Topical use only.",
-      side: "Can irritate eyes."
-    },
-    {
-      name: "Sada Bahar (Periwinkle)",
-      img: "assets/periwinkle.jpg",
-      uses: "Traditionally for diabetes, wounds.",
-      remedy: "Decoctions or extracts (under medical advice).",
-      dose: "Not recommended without doctor.",
-      side: "Can be toxic in excess."
-    },
-    {
-      name: "Senna (Sana Makki)",
-      img: "assets/senna.jpg",
-      uses: "Relieves constipation.",
-      remedy: "Used as tea or tablets.",
-      dose: "1–2 grams leaves daily.",
-      side: "Overuse causes cramping, diarrhea."
-    },
-    {
-      name: "Tukhme Balanga (Basil Seeds)",
-      img: "assets/basil.jpg",
-      uses: "Helps in heatstroke, constipation.",
-      remedy: "Soaked in water, added to drinks.",
-      dose: "1 tsp seeds daily.",
-      side: "Safe in moderation."
-    }
-  ];
+const ingredients = [
+  {
+    name: "Honey (Shahad)",
+    img: "assets/honey.png",
+    uses: `<br>
+      • Antibacterial <br>
+      • Anti-inflammatory <br>
+      • Wound healing & minimizes scarring <br>
+      • Antioxidant effects <br>
+      • Helps in respiratory, gastrointestinal & skin conditions <br>
+      • Stimulates digestion and regulates gastric acidity
+    `,
+    dose: `<br>
+      • Cough: 2.5 mL before bedtime (children >1 year)<br>
+      • Minor cuts/burns: apply raw honey directly + gauze<br>
+      • Sedation: 1 tsp honey in warm milk before bed<br>
+      • Constipation: 1 tbsp raw honey in warm water, morning
+    `,
+    side: `<br>
+      • Unsafe for infants under 1 year (infant botulism)<br>
+      • Wheezing, nausea, vomiting, dizziness possible<br>
+      • May cause irregular heartbeat in sensitive people<br>
+      • Can affect blood sugar<br>
+      • Stinging after topical application
+    `
+  },
+  {
+    name: "Lemon (Nimbu)",
+    img: "assets/lemon.jpg",
+    uses: `<br>
+      • Rich in Vitamin C<br>
+      • Anticancer properties<br>
+      • Antibacterial activity<br>
+      • Protects gastric lining<br>
+      • Supports antiulcer effects<br>
+      • Prevents scurvy
+    `,
+    dose: `<br>
+      • Antibacterial: 900 mg/mL lemon juice<br>
+      • Vitamin C: 90 mg/day (men), 75 mg/day (women)<br>
+      • Prevention of scurvy: 10 mg/day
+    `,
+    side: `<br>
+      • Regular lemon water can erode tooth enamel<br>
+      • May cause dentin hypersensitivity (tooth sensitivity)
+    `
+  },
+  {
+    name: "Almond (Badam)",
+    img: "assets/almond.jpg",
+    uses: `<br>
+      • Lowers cardiovascular disease risk (improves cholesterol)<br>
+      • Improves lipid profiles, reduces cardiometabolic risks<br>
+      • Beneficial in hyperlipidemia<br>
+      • Meets nutrient requirements (Vitamin E, Mg, K)<br>
+      • Supports diabetes management (better insulin sensitivity)<br>
+      • Antioxidant properties
+    `,
+    dose: `<br>
+      • Heart health: 42.5 g (~35 almonds) daily<br>
+      • Lipid profile: 43 g/day<br>
+      • Hyperlipidemia: 50–100 g/day<br>
+      • Nutrient supply: 28 g provides Vitamin E, Mg, K<br>
+      • Diabetes management: 60 g/day<br>
+      • Antioxidant: 50–84 g/day
+    `,
+    side: `<br>
+      • May cause allergic reactions<br>
+      • Long-term use may affect insulin sensitivity
+    `
+  },
+  {
+    name: "Ginger (Adrak)",
+    img: "assets/ginger.jpg",
+    uses: `<br>
+      • Relieves nausea<br>
+      • Reduces inflammation<br>
+      • Aids digestion<br>
+      • Prevents heart disease<br>
+      • Relieves arthritis pain
+    `,
+    dose: `<br>
+      • Pregnancy nausea: 250 mg daily for 4 days<br>
+      • Post-surgery nausea: 0.5–1 g<br>
+      • Coronary artery disease: 10 g reduces platelet aggregation
+    `,
+    side: `<br>
+      • GI issues: mild diarrhea, heartburn, irritation at high doses (6 g)<br>
+      • Allergic reactions possible (ginger dust inhalation)
+    `
+  },
+  {
+    name: "Walnut (Akhrot)",
+    img: "assets/walnut.jpg",
+    uses: `<br>
+      • Provides essential nutrition<br>
+      • Strong antioxidant<br>
+      • Lowers risk of cancer, diabetes, heart & brain disorders<br>
+      • Relieves pain<br>
+      • Anti-inflammatory effects
+    `,
+    dose: `<br>
+      • Diets with 2–6% walnuts reverse age-related decline<br>
+      • 110–440 mg/kg boosts immunity
+    `,
+    side: `<br>
+      • Mutagenic properties in excess<br>
+      • Strong laxative effect at high doses<br>
+      • Can trigger allergies & anaphylaxis<br>
+      • May cause stomach irritation<br>
+      • Black walnuts reduce absorption of some medicines (wait 1–2 hrs)
+    `
+  }
+];
 
   let visibleCount = 3;
   const container = document.getElementById("ingredients-container");
@@ -398,7 +333,6 @@ container.innerHTML += `
     document.getElementById("ingredientModalBody").innerHTML = `
       <img src="${item.img}" class="img-fluid mb-3" alt="${item.name}">
       <p><strong>Uses:</strong> ${item.uses}</p>
-      <p><strong>Remedy:</strong> ${item.remedy}</p>
       <p><strong>Dose:</strong> ${item.dose}</p>
       <p><strong>Side Effects:</strong> ${item.side}</p>
     `;
@@ -539,65 +473,82 @@ container.innerHTML += `
   </div>
 </section>
 
-<!-- Footer -->
-<footer style="background:#1b5e20; color:#fff; padding:40px 0; margin-top:50px;">
+<!-- Disclaimer Section -->
+<section style="background:#f9f9f9; padding:40px 20px; margin-top:60px; border-top:4px solid #2E7D32;">
   <div class="container">
-    <div class="row">
+    <div class="row justify-content-center">
+      <div class="col-lg-10 text-center">
+        <h5 style="font-weight:700; font-size:20px; color:#2E7D32; margin-bottom:20px; letter-spacing:0.5px;">
+          Conflict of Interest & Disclaimer
+        </h5>
+        <p style="font-size:15px; line-height:1.8; color:#555; margin-bottom:15px;">
+          <b>PHYTOTEA</b> is currently in its prototype phase until <b>December 2025</b> and was developed 
+          as part of an academic project under the supervision of 
+          <b>Dr. Wajiha Iffat</b>, Assistant Professor, Dow College of Pharmacy, 
+          Dow University of Health Sciences (DUHS).
+        </p>
+        <p style="font-size:15px; line-height:1.8; color:#555;">
+          All herbal information on PHYTOTEA is compiled from 
+          <b>peer-reviewed scientific journals</b>, recognized academic books, official pharmacopeias, 
+          and <b>WHO monographs</b>. The content is <b>evidence-based and referenced</b>; however, 
+          it is intended for <b>educational and research purposes only</b> and should not be considered 
+          final or complete.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <!-- About -->
-      <div class="col-md-4 mb-4">
-        <h5 style="font-weight:700; margin-bottom:15px;">Our Mission</h5>
-        <p style="line-height:1.6; font-size:15px;">
+
+<!-- Footer -->
+<footer style="background:#1b5e20; color:#fff; padding:50px 0 30px; margin-top:60px; font-family:'Poppins', sans-serif;">
+  <div class="container">
+    <div class="row justify-content-between">
+
+      <!-- Mission -->
+      <div class="col-md-6 mb-4">
+        <h5 style="font-weight:700; margin-bottom:20px; font-size:18px;">Our Mission</h5>
+        <p style="line-height:1.7; font-size:15px; color:#e0e0e0; max-width:500px;">
           We aim to spread safe and evidence-based knowledge about herbal ingredients. 
-          Our platform is designed to guide you towards healthier, natural choices.
+          Our platform guides you towards healthier, natural choices with trust and accuracy.
         </p>
       </div>
 
       <!-- Quick Links -->
-      <div class="col-md-4 mb-4">
-        <h5 style="font-weight:700; margin-bottom:15px;">Quick Links</h5>
-        <ul style="list-style:none; padding:0; margin:0;">
-          <li><a href="#home" style="color:#fff; text-decoration:none;">Home</a></li>
-          <li><a href="#about" style="color:#fff; text-decoration:none;">About</a></li>
-          <li><a href="#research" style="color:#fff; text-decoration:none;">Our Vision</a></li>
-          <li><a href="#ingredients" style="color:#fff; text-decoration:none;">Herbal Drug</a></li>
-          <li><a href="#faqs" style="color:#fff; text-decoration:none;">FAQs</a></li>
+      <div class="col-md-4 mb-4 text-md-end">
+        <h5 style="font-weight:700; margin-bottom:20px; font-size:18px;">Quick Links</h5>
+        <ul style="list-style:none; padding:0; margin:0; line-height:2;">
+          <li><a href="#home" style="color:#fff; text-decoration:none; transition:0.3s;">Home</a></li>
+          <li><a href="#about" style="color:#fff; text-decoration:none; transition:0.3s;">About</a></li>
+          <li><a href="#research" style="color:#fff; text-decoration:none; transition:0.3s;">Our Vision</a></li>
+          <li><a href="#ingredients" style="color:#fff; text-decoration:none; transition:0.3s;">Herbal Drug</a></li>
+          <li><a href="#faqs" style="color:#fff; text-decoration:none; transition:0.3s;">FAQs</a></li>
         </ul>
-      </div>
-
-      <!-- Contact -->
-      <div class="col-md-4 mb-4">
-        <h5 style="font-weight:700; margin-bottom:15px;">Contact Us</h5>
-        <p style="margin:0; font-size:15px;">
-          <b>LOCATION:</b>  DOW University Karachi, Pakistan
-        </p>
- <p style="margin:0; font-size:15px;">
-  <b>EMAIL:</b> 
-  <a href="mailto:aeiosa38@gmail.com" style="color:#aabeab; text-decoration:none;">
-    aeiosa38@gmail.com
-  </a>
-</p>
-
-        <p style="margin:0; font-size:15px;"><b>PHONE:</b>  +92 333 7818684</p>
-        <div style="margin-top:12px;">
-          <a href="#" style="color:#fff; margin-right:10px; font-size:18px;"><i class="bi bi-facebook"></i></a>
-          <a href="#" style="color:#fff; margin-right:10px; font-size:18px;"><i class="bi bi-twitter"></i></a>
-          <a href="#" style="color:#fff; font-size:18px;"><i class="bi bi-instagram"></i></a>
-        </div>
       </div>
 
     </div>
 
-    <hr style="border-color:rgba(255,255,255,0.2);">
+    <hr style="border-color:rgba(255,255,255,0.2); margin:30px 0;">
+
+    <!-- Copyright -->
     <div class="row">
       <div class="col-md-12 text-center">
-        <p style="margin:0; font-size:14px;">
-          &copy; 2025 PHYTOPEA. All Rights Reserved.
+        <p style="margin:0; font-size:14px; color:#bdbdbd;">
+          &copy; 2025 <b>PHYTOPEA</b>. All Rights Reserved.
         </p>
       </div>
     </div>
   </div>
 </footer>
+
+<!-- Footer Hover Style -->
+<style>
+  footer a:hover {
+    color: #78e08f !important; /* lighter herbal green */
+    padding-left: 4px;
+  }
+</style>
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 

@@ -98,7 +98,6 @@
 </section>
 
 <!-- About Section -->
-<!-- About Section -->
 <section id="about" class="about-section py-5">
   <div class="container">
     <div class="row align-items-center">
@@ -143,13 +142,11 @@ This website aims to encourage the safe and informed use of herbal ingredients f
     </div>
   </div>
 </section>
-
-
 <section id="ingredients" class="ingredients-section py-5">
   <div class="container">
     <div class="row text-center mb-5">
       <div class="col-md-12">
-        <h2 class="fw-bold"  style="font-size:38px; color:#2E7D32;">Herbal Drug Dictionary</h2>
+        <h2 class="fw-bold" style="font-size:38px; color:#2E7D32;">Herbal Drug Dictionary</h2>
       </div>
     </div>
 
@@ -157,7 +154,7 @@ This website aims to encourage the safe and informed use of herbal ingredients f
       <!-- Cards dynamically rendered here -->
     </div>
 
-    <div class="text-center mt-4" >
+    <div class="text-center mt-4">
       <button id="seeMoreBtn" class="btn btn-success me-2" style="background-color: #2E7D32;">See More</button>
       <button id="seeAllBtn" class="btn btn-success me-2" style="background-color: #2E7D32;">See All</button>
     </div>
@@ -223,17 +220,24 @@ const ingredients = [
     side: `<br>
       • GI issues: mild diarrhea, heartburn, irritation at high doses (6 g)<br>
       • Allergic reactions possible (ginger dust inhalation)
+    `,
+    islamic: `<br>
+      • Helps digestion, softens stomach mildly<br>
+      • Opens liver clogs<br>
+      • Decomposes thick intestinal gases<br>
+      • With sugar & hot water works as laxative<br>
+      • Dries phlegm and increases memory
     `
   },
   {
-    name: "Honey (Shahad)",
-    img: "assets/honey.png",
+    name: "Honey (Shehad)",
+    img: "assets/honey2.png",
     uses: `<br>
-      • Antibacterial <br>
-      • Anti-inflammatory <br>
-      • Wound healing & minimizes scarring <br>
-      • Antioxidant effects <br>
-      • Helps in respiratory, gastrointestinal & skin conditions <br>
+      • Antibacterial<br>
+      • Anti-inflammatory<br>
+      • Wound healing & minimizes scarring<br>
+      • Antioxidant effects<br>
+      • Helps in respiratory, gastrointestinal & skin conditions<br>
       • Stimulates digestion and regulates gastric acidity
     `,
     dose: `<br>
@@ -248,6 +252,15 @@ const ingredients = [
       • May cause irregular heartbeat in sensitive people<br>
       • Can affect blood sugar<br>
       • Stinging after topical application
+    `,
+    islamic: `<br>
+      Al-Bukhari narrated Prophet ﷺ said: "There is cure in three substances, a drink of honey, a slash with a knife used for cupping and cauterizing by fire. I forbid my nation from cauterizing by fire."<br>
+      • Washes harmful substances from veins/intestines<br>
+      • Valuable for elderly, phlegm, cold conditions<br>
+      • Nutritious, softens bowel, preserves food<br>
+      • With water helps against rabid dog bite<br>
+      • Prophet ﷺ used to drink honey with water on empty stomach<br>
+      • Hadith [Ibn Majah]: "Make use of the two cures: honey and the Qur'an."
     `
   },
   {
@@ -269,6 +282,49 @@ const ingredients = [
     side: `<br>
       • Regular lemon water can erode tooth enamel<br>
       • May cause dentin hypersensitivity (tooth sensitivity)
+    `
+  },
+  {
+    name: "Peppermint Oil (Roghan-e-Podina)",
+    img: "assets/peppermint.jpg",
+    uses: `<br>
+      • Migraine<br>
+      • Headache<br>
+      • Irritable bowel syndrome<br>
+      • Neuralgia<br>
+      • Dyspepsia
+    `,
+    dose: `<br>
+      • IBS: 0.2 to 0.4 mL three times daily<br>
+      • Dyspepsia: 90 mg peppermint oil + 50 mg caraway oil<br>
+      • Migraine: 5 mL peppermint oil
+    `,
+    precaution: `<br>
+      • Avoid in infants, very young children, pregnant or lactating women
+    `,
+    side: `<br>
+      • Perianal burning<br>
+      • Blurred vision<br>
+      • Nausea, vomiting<br>
+      • Rare interstitia
+    `
+  },
+  {
+    name: "Turmeric (Haldi)",
+    img: "assets/turmeric.jpg",
+    uses: `<br>
+      • Reduces pain & postoperative fatigue<br>
+      • Strong anti-inflammatory effect
+    `,
+    dose: `<br>
+      • Fatigue: 500 mg capsule every 6 hrs for 3 weeks<br>
+      • Anti-inflammatory: 400 mg curcumin<br>
+      • FDA safe dose: 4,000–8,000 mg/day
+    `,
+    side: `<br>
+      • Dermatitis<br>
+      • Neurotoxic potential (curcumol)<br>
+      • Inhibits sperm motility & fertility
     `
   },
   {
@@ -295,63 +351,62 @@ const ingredients = [
   }
 ];
 
-  let visibleCount = 3;
-  const container = document.getElementById("ingredients-container");
+let visibleCount = 3;
+const container = document.getElementById("ingredients-container");
 
-  function renderIngredients(limit) {
-    container.innerHTML = "";
-    ingredients.slice(0, limit).forEach((item, index) => {
-container.innerHTML += `
-  <div class="col-lg-4 col-md-6 mb-4 d-flex">
-    <div class="card shadow-sm h-100 flex-fill">
-      <img src="${item.img}" class="card-img-top" alt="${item.name}">
-      <div class="card-body d-flex flex-column">
-        <h5 class="card-title">${item.name}</h5>
-        <p class="card-text"><strong>Uses:</strong> ${item.uses}</p>
-<button 
-  class="mt-auto" 
-  style="background-color:#2E7D32; color:#fff; font-weight:600; border:none; border-radius:6px; padding:8px 18px; transition:all 0.3s ease;" 
-  data-bs-toggle="modal" 
-  data-bs-target="#ingredientModal"
-  onclick="showDetails(${index})">
-  View Details
-</button>
-
-
-
+function renderIngredients(limit) {
+  container.innerHTML = "";
+  ingredients.slice(0, limit).forEach((item, index) => {
+    container.innerHTML += `
+      <div class="col-lg-4 col-md-6 mb-4 d-flex">
+        <div class="card shadow-sm h-100 flex-fill">
+          <img src="${item.img}" class="card-img-top" alt="${item.name}">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">${item.name}</h5>
+            <p class="card-text"><strong>Uses:</strong> ${item.uses}</p>
+            <button 
+              class="mt-auto" 
+              style="background-color:#2E7D32; color:#fff; font-weight:600; border:none; border-radius:6px; padding:8px 18px; transition:all 0.3s ease;" 
+              data-bs-toggle="modal" 
+              data-bs-target="#ingredientModal"
+              onclick="showDetails(${index})">
+              View Details
+            </button>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-`;
-
-    });
-  }
-
-  function showDetails(index) {
-    const item = ingredients[index];
-    document.getElementById("ingredientModalLabel").innerText = item.name;
-    document.getElementById("ingredientModalBody").innerHTML = `
-      <img src="${item.img}" class="img-fluid mb-3" alt="${item.name}">
-      <p><strong>Uses:</strong> ${item.uses}</p>
-      <p><strong>Dose:</strong> ${item.dose}</p>
-      <p><strong>Side Effects:</strong> ${item.side}</p>
     `;
-  }
-
-  document.getElementById("seeMoreBtn").addEventListener("click", () => {
-    visibleCount += 3;
-    if (visibleCount > ingredients.length) visibleCount = ingredients.length;
-    renderIngredients(visibleCount);
   });
+}
 
-  document.getElementById("seeAllBtn").addEventListener("click", () => {
-    visibleCount = ingredients.length;
-    renderIngredients(visibleCount);
-  });
+function showDetails(index) {
+  const item = ingredients[index];
+  document.getElementById("ingredientModalLabel").innerText = item.name;
+  document.getElementById("ingredientModalBody").innerHTML = `
+    <img src="${item.img}" class="img-fluid mb-3" alt="${item.name}">
+    <p><strong>Uses:</strong> ${item.uses}</p>
+    <p><strong>Dose:</strong> ${item.dose || "N/A"}</p>
+    ${item.precaution ? `<p><strong>Precaution:</strong> ${item.precaution}</p>` : ""}
+    <p><strong>Side Effects:</strong> ${item.side}</p>
+    ${item.islamic ? `<p><strong>Islamic References:</strong> ${item.islamic}</p>` : ""}
+  `;
+}
 
-  // Initial render
+document.getElementById("seeMoreBtn").addEventListener("click", () => {
+  visibleCount += 3;
+  if (visibleCount > ingredients.length) visibleCount = ingredients.length;
   renderIngredients(visibleCount);
+});
+
+document.getElementById("seeAllBtn").addEventListener("click", () => {
+  visibleCount = ingredients.length;
+  renderIngredients(visibleCount);
+});
+
+// Initial render
+renderIngredients(visibleCount);
 </script>
+
 <!-- FAQ Section -->
 <section id="faqs" class="faq-section py-5" style="background:#f9fdf9;">
   <div class="container">
@@ -501,7 +556,7 @@ container.innerHTML += `
 
 
 <!-- Footer -->
-<footer style="background:#1b5e20; color:#fff; padding:50px 0 30px; margin-top:60px; font-family:'Poppins', sans-serif;">
+<footer style="background:#2b8b44; color:#fff; padding:50px 0 30px; margin-top:60px; font-family:'Poppins', sans-serif;">
   <div class="container">
     <div class="row justify-content-between">
 
@@ -528,7 +583,7 @@ container.innerHTML += `
 
     </div>
 
-    <hr style="border-color:rgba(255,255,255,0.2); margin:30px 0;">
+    <hr style="border-color:rgba(255, 255, 255, 0.469); margin:30px 0;">
 
     <!-- Copyright -->
     <div class="row">

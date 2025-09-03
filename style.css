@@ -61,6 +61,7 @@ body {
   object-fit: cover;
 }
 
+
 /* Overlay for dark effect */
 .hero-overlay {
   position: absolute;
@@ -84,17 +85,37 @@ body {
 
 /* Desktop (default) */
 .hero-text h1 {
-  font-size: 3rem;   /* Large title */
+  font-size: 3rem;
   font-weight: 700;
+  background: linear-gradient(90deg, #A8E6CF, #56AB2F);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
 }
+
+/* Hero paragraph improved */
 .hero-text p {
-  font-size: 1.25rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+  color: #f0f8f0;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
 }
-.hero-buttons {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
+
+/* Hero buttons - gradient and hover */
+.hero-buttons button {
+  background: linear-gradient(45deg, #2E7D32, #56AB2F);
+  color: #fff;
+  padding: 12px 32px;
+  border-radius: 50px;
+  font-weight: 600;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  transition: all 0.4s ease;
+}
+
+.hero-buttons button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.25);
+  background: linear-gradient(45deg, #1b5e20, #2E7D32);
 }
 
 /* Responsive: Tablets & below */
@@ -199,32 +220,31 @@ body {
   border: none;
 }
 
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' 
-  xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255,255,255,1%29' 
-  stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' 
-  d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-}
 
-/* Card image consistency */
 .card-img-top {
-  height: 200px;       /* Fixed height for all images */
-  object-fit: cover;   /* Crops nicely without stretching */
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  height: 400px;         
+  object-fit: cover;    
+  width: 100%;           
+  border-top-left-radius: 0.5rem; 
+  border-top-right-radius: 0.5rem;
 }
-
-/* Card styling */
-.card {
+.modal-body img {
+  width: 100%;
+  max-height: 350px;
+  object-fit:contain;       /* covers modal without stretching */
   border-radius: 12px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+.card {
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  background: #f9fff9;
+  position: relative;
 }
+
 /* Custom themed buttons */
 .btn-see-more, .btn-see-all {
   background-color: #2E7D32;   /* herbal green */
@@ -241,6 +261,9 @@ body {
   transform: translateY(-2px);
   box-shadow: 0 6px 12px rgba(26, 154, 45, 0.15);
 }
+
+
+
 /* Custom green button for View Details */
 .card .btn-view {
   background-color: #2E7D32 !important;   /* herbal green */
@@ -298,3 +321,13 @@ body {
   border-radius: 0 0 6px 6px;
   line-height: 1.6;
 }
+
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' 
+  xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255,255,255,1%29' 
+  stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' 
+  d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+
